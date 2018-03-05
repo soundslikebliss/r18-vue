@@ -1,17 +1,19 @@
 <template>
   <div class="work">
 
-    <div class="loading" v-if="loading">
+    <!-- <div class="loading" v-if="loading">
       <img src="../assets/loading.gif" alt="loading...">
-    </div>
+    </div> -->
 
     <div v-if="error" class="error">
       {{error}}
     </div>
 
-    <div v-if="work" v-for="i in work" class="content">
-      <h2>{{i.name}}</h2>
-      <p>{{i.desc}}</p>
+    <div v-if="work" v-for="places in work" class="content">
+        <div v-for="i in places">
+          <h2>{{i.name}}:</h2> 
+          <p>{{i.desc}}</p>
+        </div>
     </div>
 
   </div>
