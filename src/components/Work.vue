@@ -1,5 +1,8 @@
 <template>
   <div class="work">
+    <h1>{{title}}</h1>
+
+    <br />
 
     <!-- <div class="loading" v-if="loading">
       <img src="../assets/loading.gif" alt="loading...">
@@ -30,6 +33,7 @@ export default {
 
   data() {
     return {
+      title: 'Work',
       loading: false,
       work: null,
       error: null,
@@ -49,22 +53,18 @@ export default {
       this.loading = true;
 
       axios.get('https://david-adams-resume.firebaseio.com/work.json')
-      .then((resp) => {
-        this.work = resp.data
-        this.loading = false;
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    
+        .then((resp) => {
+          this.work = resp.data
+          this.loading = false;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      } 
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
 </style>

@@ -9,7 +9,7 @@ export default {
   name: 'About',
   data () {
     return {
-      msg: 'ABOUT'
+      msg: 'About'
     }
   }
 }
@@ -17,7 +17,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
 </style>

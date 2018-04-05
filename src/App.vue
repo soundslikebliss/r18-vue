@@ -23,7 +23,7 @@
 
 		</section>
       </div>
-      <!-- <img class="me" src="./assets/me2.jpg"> -->
+      <img class="me" src="./assets/me2.jpg">
   </div>    
 </template>
 
@@ -55,7 +55,6 @@ export default {
 	}
 }
 
-  
 </script>
 
 
@@ -67,14 +66,32 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-img.me {
-  height: 160px;
-  border-radius: 100%;
+h2 {
+	font-weight: 600;
+	font-style: italic;
 }
-#content {
+img.me {
+  height: 120px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 260px;
+
 }
 #inner {
-	overflow: scroll;
+	height: 400px;
+	width: 400px;
+	padding: 12px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* background-color: #eee; */
+	background-image: url('./assets/concrete-texture.png');
+	opacity: .8;
+	overflow: auto;
 	border-radius: 4px;
 }
 #wrapper {
@@ -82,7 +99,7 @@ img.me {
 }
 #buttons {
 	position: absolute;
-	top: 50%;
+	top: 43%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin-left: -270px;
@@ -107,16 +124,7 @@ button {
 button:focus {
 	outline: none;
 }
-#inner {
-	height: 400px;
-	width: 400px;
-	padding: 12px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #eee;
-}
+
 
 
 </style>
