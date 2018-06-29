@@ -66,6 +66,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+h1 {
+    font-size: 1.8em;
+    margin: 0 0 .5em 0;
+}
 h2 {
 	font-weight: 600;
 	font-style: italic;

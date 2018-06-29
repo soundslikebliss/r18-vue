@@ -8,7 +8,7 @@
       {{error}}
     </div>
 
-    <div v-if="work" v-for="places in work" class="content">
+    <div v-if="data" v-for="places in data" class="content">
         <div v-for="i in places">
           <h2>{{i.name}}:</h2> 
           <p>{{i.desc}}</p>
@@ -22,7 +22,7 @@
 
 
 <script>
-// import axios from 'axios'
+// import the fetchData mixin here
 import {fetchDataMixin} from '../../src/fetchData.js'
 
 
@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       title: 'Work',
-      work: null,
+      data: null,
       error: null
     }
   },
