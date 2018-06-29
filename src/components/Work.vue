@@ -4,10 +4,6 @@
 
     <br />
 
-    <!-- <div class="loading" v-if="loading">
-      <img src="../assets/loading.gif" alt="loading...">
-    </div> -->
-
     <div v-if="error" class="error">
       {{error}}
     </div>
@@ -26,22 +22,26 @@
 
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
+import {fetchDataMixin} from '../../src/fetchData.js'
+
 
 export default {
   name: 'Work',
 
+  mixins: [fetchDataMixin],
+
   data() {
     return {
       title: 'Work',
-      loading: false,
       work: null,
-      error: null,
+      error: null
     }
   },
 
   created() {
-    this.fetchData()
+    //   pulling in mixin; call fetchData method from mixin here
+    this.fetchData('work');
   },
 
   watch: {
@@ -49,18 +49,6 @@ export default {
   },
 
   methods: {
-    fetchData() {
-      this.loading = true;
-
-      axios.get('https://david-adams-resume.firebaseio.com/work.json')
-        .then((resp) => {
-          this.work = resp.data
-          this.loading = false;
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-      } 
   }
 }
 </script>

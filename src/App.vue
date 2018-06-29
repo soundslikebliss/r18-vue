@@ -32,6 +32,7 @@
 <script>
 import randomColor from 'randomcolor'
 
+
 export default {
 	name: 'App',
 
@@ -42,16 +43,15 @@ export default {
 	},
 
 	created() {
-		setInterval(this.changeColor, 2000)
+        setInterval(this.changeColor, 2000)
 	},
 
 
 	methods: {
 		changeColor() {
-				let color = randomColor();
-				this.randoColor = color
-			
-		}
+            let color = randomColor();
+            this.randoColor = color	
+        }
 	}
 }
 
