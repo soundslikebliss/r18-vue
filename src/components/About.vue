@@ -1,17 +1,48 @@
 <template>
   <div class="about">
-    <h1>{{ msg }}</h1>
+    <h1>{{ title }}</h1>
+    <br>
+    <h2>{{ data.headline }}<br>{{data.sub}}</h2>
+    <p>{{ data.blurb }}</p>
+
+    <h3>{{data.tech_blurb}}</h3>
+    <div v-for="i in data.techs" class="tech-list">
+        <ul>
+            <li>{{i}}</li>
+        </ul>
+    </div>
+
+
   </div>
 </template>
 
 <script>
+// import the fetchData mixin here
+import {fetchDataMixin} from '../../src/fetchData.js'
+
+
 export default {
   name: 'About',
+
+  mixins: [fetchDataMixin],
+
   data () {
     return {
-      msg: 'About'
+      title: 'About',
+      data: null,
+      error: null
     }
+  },
+
+  created() {
+    //   pulling in mixin; call fetchData method from mixin here
+    this.fetchData('about');
+  },
+
+  methods: {
   }
+
+
 }
 </script>
 
