@@ -8,7 +8,8 @@ export const fetchDataMixin = {
 
             axios.get('https://david-adams-resume.firebaseio.com/' +arg+ '.json')
                 .then((resp) => {
-                    this.data = resp.data
+                    this.data = resp.data;
+                    this.loading = false;
                     console.log(this.data, 'response data');
                 })
                 .catch(function (error) {

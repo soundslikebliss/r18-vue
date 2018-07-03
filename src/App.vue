@@ -43,7 +43,7 @@ export default {
 	},
 
 	created() {
-        setInterval(this.changeColor, 2000)
+        setInterval(this.changeColor, 1000)
 	},
 
 
@@ -134,6 +134,24 @@ button {
 }
 button:focus {
 	outline: none;
+}
+
+@media screen and (max-width: 640px) {
+    #buttons {
+        width: 100%;
+        top: 7%;
+        margin-left: 0;
+    }
+    #buttons ul {
+        padding: 0;
+        text-align: center;
+    }
+    #buttons li {
+        display: inline;
+    }
+    #inner {
+        width: 85%;
+    }
 }
 
 

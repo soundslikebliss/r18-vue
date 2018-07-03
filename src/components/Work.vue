@@ -1,6 +1,11 @@
 <template>
   <div class="work">
+
     <h1>{{title}}</h1>
+
+    <div v-if="loading" class="loading">
+        <img src="../assets/loading.gif" alt="loading...">
+    </div>
 
     <br />
 
@@ -36,7 +41,8 @@ export default {
   data() {
     return {
       title: 'Work',
-      data: null,
+      loading: true,
+      data: '',
       error: null
     }
   },

@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <h1>{{ msg }}</h1>
+    <h1></h1>
   </div>
 </template>
 
@@ -16,9 +16,17 @@ export default {
 
   data () {
     return {
-      data: null
+      loading: true,
+      data: '',
+      error: ''
     }
+  },
+
+  created() {
+    //   pulling in mixin; call fetchData method from mixin here
+    this.fetchData('contact');
   }
+
 }
 </script>
 
