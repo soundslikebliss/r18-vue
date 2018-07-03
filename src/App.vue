@@ -60,6 +60,10 @@ export default {
 
 
 <style>
+:root {
+    /* variables */
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -82,6 +86,7 @@ img.me {
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 260px;
+  box-shadow: var(--box-shadow);
 
 }
 #inner {
@@ -97,6 +102,7 @@ img.me {
 	opacity: .8;
 	overflow: auto;
 	border-radius: 4px;
+    box-shadow: var(--box-shadow);
 }
 #wrapper {
 	height: 100%;
@@ -124,6 +130,7 @@ button {
 	border: none;
 	cursor: pointer;
 	transition: background 3s;
+    box-shadow: var(--box-shadow);
 }
 button:focus {
 	outline: none;
