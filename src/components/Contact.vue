@@ -7,9 +7,13 @@
 <script>
 export default {
   name: 'Contact',
+
+  mixins: [fetchDataMixin],
+
+
   data () {
     return {
-      msg: 'Contact'
+      data: null
     }
   }
 }
