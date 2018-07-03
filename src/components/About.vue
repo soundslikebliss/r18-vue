@@ -41,7 +41,7 @@ export default {
   data () {
     return {
       title: 'About',
-      loading: true,
+      loading: false,
       data: '',
       error: ''
     }
