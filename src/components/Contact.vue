@@ -5,6 +5,9 @@
 </template>
 
 <script>
+// import the fetchData mixin here
+import {fetchDataMixin} from '../../src/fetchData.js'
+
 export default {
   name: 'Contact',
 
