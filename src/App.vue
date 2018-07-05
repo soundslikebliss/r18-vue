@@ -24,6 +24,12 @@
 		</section>
       </div>
       <img class="me" src="./assets/me2.jpg">
+
+      <br>
+      <footer>
+        <p>This SPA was built with VueJs, Vue Router, Axios for data fetching, <br>Firebase for data storage and version controlled with <a href="https://github.com/soundslikebliss/r18-vue" target="_blank">Git.</a></p>
+      </footer>    
+      
   </div>    
 </template>
 
@@ -85,7 +91,7 @@ img.me {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 260px;
+  margin-top: 214px;
   box-shadow: var(--box-shadow);
 
 }
@@ -94,7 +100,7 @@ img.me {
 	width: 400px;
 	padding: 12px;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	/* background-color: #eee; */
@@ -134,6 +140,16 @@ button {
 }
 button:focus {
 	outline: none;
+}
+
+footer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+    margin-top: 320px;
+    font-size: 12px;
+
 }
 
 @media screen and (max-width: 640px) {

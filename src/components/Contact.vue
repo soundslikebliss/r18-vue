@@ -1,6 +1,13 @@
 <template>
   <div class="contact">
-    <h1></h1>
+
+    <h1>{{title}}</h1>
+    <br>
+
+    <p>{{data.headline}}, {{data.sub}}</p>
+    <strong><p>{{data.email}}</p></strong>
+    <a :href="data.linkedin" target="_blank">LinkedIn </a>
+
   </div>
 </template>
 
@@ -16,6 +23,7 @@ export default {
 
   data () {
     return {
+      title: 'Contact',
       loading: false,
       data: '',
       error: ''
