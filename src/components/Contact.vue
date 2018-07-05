@@ -4,9 +4,16 @@
     <h1>{{title}}</h1>
     <br>
 
-    <p>{{data.headline}}, {{data.sub}}</p>
-    <strong><p>{{data.email}}</p></strong>
-    <a :href="data.linkedin" target="_blank">LinkedIn </a>
+    <div v-if="error" class="error">
+      {{error}}
+    </div>
+
+    <div v-if="data">
+        <p>{{data.headline}}, {{data.sub}}</p>
+        <strong><p>{{data.email}}</p></strong>
+        <a :href="data.linkedin" target="_blank">LinkedIn </a>
+    </div>
+    
 
   </div>
 </template>
