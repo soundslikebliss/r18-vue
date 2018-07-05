@@ -27,7 +27,7 @@
 
       <br>
       <footer>
-        <p>This SPA was built with VueJs, Vue Router, Axios for data fetching, <br>Firebase for data storage and version controlled with <a href="https://github.com/soundslikebliss/r18-vue" target="_blank">Git.</a></p>
+        <p>This SPA was built with VueJs, Vue Router, Axios for data fetching, <br>Firebase for data storage and is version controlled with <a href="https://github.com/soundslikebliss/r18-vue" target="_blank">Git.</a></p>
       </footer>    
       
   </div>    
