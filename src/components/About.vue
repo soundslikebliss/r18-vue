@@ -2,11 +2,12 @@
   <div class="about">
 
     <h1>{{ title }}</h1>
-    <br>
-
+    
     <div v-if="loading" class="loading">
         <img src="../assets/loading.gif" alt="loading...">
     </div>
+
+    <br />
 
     <div v-if="error" class="error">
       {{error}}
@@ -41,7 +42,7 @@ export default {
   data () {
     return {
       title: 'About',
-      loading: false,
+      loading: true,
       data: '',
       error: ''
     }
@@ -49,7 +50,7 @@ export default {
 
   created() {
     //   pulling in mixin; call fetchData method from mixin here
-    this.fetchData('about');
+        this.fetchData('about'); 
   },
 
   methods: {

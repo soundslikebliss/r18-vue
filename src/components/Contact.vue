@@ -2,7 +2,12 @@
   <div class="contact">
 
     <h1>{{title}}</h1>
-    <br>
+    
+    <div v-if="loading" class="loading">
+        <img src="../assets/loading.gif" alt="loading...">
+    </div>
+
+    <br />
 
     <div v-if="error" class="error">
       {{error}}
@@ -31,7 +36,7 @@ export default {
   data () {
     return {
       title: 'Contact',
-      loading: false,
+      loading: true,
       data: '',
       error: ''
     }

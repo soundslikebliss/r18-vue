@@ -27,7 +27,7 @@
 
       <br>
       <footer>
-        <p>This SPA was built with VueJs, Vue Router, Axios for data fetching, <br>Firebase for data storage and is version controlled with <a href="https://github.com/soundslikebliss/r18-vue" target="_blank">Git.</a></p>
+        <p>This SPA was built with VueJs, Vue Router, Firebase for data storage and is version controlled with <a href="https://github.com/soundslikebliss/r18-vue" target="_blank">Git.</a></p>
       </footer>    
       
   </div>    
@@ -148,8 +148,11 @@ footer {
     left: 50%;
 	transform: translate(-50%, -50%);
     margin-top: 320px;
-    font-size: 12px;
-
+    font-size: 11px;
+    width: 25%;
+    padding-top: 3em;
+    text-align: center;
+    font-style: initial;
 }
 
 @media screen and (max-width: 640px) {
@@ -167,6 +170,14 @@ footer {
     }
     #inner {
         width: 85%;
+        top: 55%;
+    }
+    img.me {
+        margin-top: 280px;
+    }
+    footer {
+        width: 75%;
+        padding-top: 16em;
     }
 }
 

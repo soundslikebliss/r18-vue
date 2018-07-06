@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       title: 'Work',
-      loading: false,
+      loading: true,
       data: '',
       error: null
     }

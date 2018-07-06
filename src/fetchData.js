@@ -6,7 +6,8 @@ export const fetchDataMixin = {
     methods: {
         fetchData: function(arg) {
 
-            axios.get('https://david-adams-resume.firebaseio.com/' +arg+ '.json')
+            setTimeout(() => {
+                axios.get('https://david-adams-resume.firebaseio.com/' +arg+ '.json')
                 .then((resp) => {
                     this.data = resp.data;
                     this.loading = false;
@@ -15,6 +16,7 @@ export const fetchDataMixin = {
                 .catch(function (error) {
                     console.log(error);
                 });
+            }, 250);  
         }
     }
 }
