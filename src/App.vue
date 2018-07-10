@@ -141,6 +141,12 @@ button {
 button:focus {
 	outline: none;
 }
+.loading {
+    text-align: center;
+}
+.loading img {
+    height: 80px;
+}
 
 footer {
     position: absolute;

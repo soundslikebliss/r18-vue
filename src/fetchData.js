@@ -16,7 +16,7 @@ export const fetchDataMixin = {
                 .catch(function (error) {
                     console.log(error);
                 });
-            }, 400);  
+            }, 300);  
         }
     }
 }
