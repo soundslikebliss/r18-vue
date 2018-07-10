@@ -13,16 +13,22 @@
       {{error}}
     </div>
 
-    <div v-if="data">
-        <h2>{{ data.headline }}<br>{{data.sub}}</h2>
-        <p>{{ data.blurb }}</p>
-        <h3>{{data.tech_blurb}}</h3>
-        <div v-for="i in data.techs" class="tech-list">
-            <ul>
-                <li>{{i}}</li>
-            </ul>
+    <transition name="fade">
+        <div v-if="show">
+            <div v-if="data">
+                <h2>{{ data.headline }}<br>{{data.sub}}</h2>
+                <p>{{ data.blurb }}</p>
+                <h3>{{data.tech_blurb}}</h3>
+                <div v-for="i in data.techs" class="tech-list">
+                    <ul>
+                        <li>{{i}}</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+    </transition>
+
+    
     
 
 
@@ -43,6 +49,7 @@ export default {
     return {
       title: 'About',
       loading: true,
+      show: false,
       data: '',
       error: ''
     }

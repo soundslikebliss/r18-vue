@@ -13,14 +13,20 @@
       {{error}}
     </div>
 
-    <div v-if="data" v-for="places in data" class="content">
-        <div v-for="i in places">
-          <h2>{{i.name}}:</h2> 
-          <p v-html="i.desc"></p>
-          <p v-if="i.link" v-html="i.link"></p>
-          <br>
+
+    <transition name="fade">
+        <div v-if="show">
+            <div v-if="data" v-for="places in data" class="content">
+                <div v-for="i in places">
+                    <h2>{{i.name}}:</h2> 
+                    <p v-html="i.desc"></p>
+                    <p v-if="i.link" v-html="i.link"></p>
+                    <br>
+                </div>
+            </div>
         </div>
-    </div>
+    </transition>
+
 
   </div>
 </template>

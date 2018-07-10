@@ -11,6 +11,7 @@ export const fetchDataMixin = {
                 .then((resp) => {
                     this.data = resp.data;
                     this.loading = false;
+                    this.show = true;
                     console.log(this.data, 'response data');
                 })
                 .catch(function (error) {

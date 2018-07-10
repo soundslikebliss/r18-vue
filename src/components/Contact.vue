@@ -13,12 +13,16 @@
       {{error}}
     </div>
 
-    <div v-if="data">
-        <p>{{data.headline}}, {{data.sub}}</p>
-        <strong><p>{{data.email}}</p></strong>
-        <a :href="data.linkedin" target="_blank">LinkedIn </a>
-    </div>
-    
+    <transition name="fade">
+        <div v-if="show">
+            <div v-if="data">
+                <p>{{data.headline}}, {{data.sub}}</p>
+                <strong><p>{{data.email}}</p></strong>
+                <a :href="data.linkedin" target="_blank">LinkedIn </a>
+            </div>
+        </div>
+    </transition>
+
 
   </div>
 </template>
